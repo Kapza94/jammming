@@ -33,3 +33,7 @@ code {
 .btn-p {
   padding: 0.5rem 3.5rem 0.5rem 3.5rem;
 }
+
+.h-1000 {
+  height: 1000px !important;
+}
