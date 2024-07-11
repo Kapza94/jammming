@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+// Deleting and spinning up using Vite tailwind. 
