@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply bg-black;
+}
+
 #root {
-  @apply bg-gray-600 ;
+  @apply bg-violet-900
+  rounded-md;
 }
