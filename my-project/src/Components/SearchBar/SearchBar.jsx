@@ -2,7 +2,6 @@ import { useState } from "react";
 import { songs } from "../TrackList/TrackList";
 
 const SearchBar = (props) => {
-
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
@@ -22,11 +21,10 @@ const SearchBar = (props) => {
 
   return (
     <form className="flex justify-center items-center flex-col p-5 bg-black" action="submit">
-      
       <h3 className="p-2 m-1 text-3xl text-white font-bold">SEARCH</h3>
-      
+
       <input onChange={handleInputChange} type="text" className="p-2 m-1 rounded-lg" />
-      
+
       <button
         type="submit"
         onClick={handleClickSearch}
