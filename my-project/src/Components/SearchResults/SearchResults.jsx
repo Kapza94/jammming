@@ -4,22 +4,31 @@
 // }
 // IN TS Lenas advice for naming can come in handy with IComponentNameProps
 
-// const props = {
-//   results: {
-//     name: '1'
-//   }
-// }
-// pass (props) => props.results.name 
+// pass (props) => props.results.name
 // pass {results} from props => results.name
+import Track from "../Track/Track";
 
-const SearchResults = ({ results }) => {
+const SearchResults = ({ results, handleSelectedTracks }) => {
   // console.log(props);
   return (
-    <div className="w-1/2 p-3">
-      <h2 className="text-white ">Results</h2>
+    <div className="w-1/2 ">
+      <h2 className="text-white text-3xl">Results</h2>
 
       {results.map((result, i) => (
-        <div key={i}>{result.name}</div>
+        <div key={i} className="border-b-[1px]  flex justify-between">
+          <Track result={result} />
+          <div className="flex items-center">
+            <button
+              type="button"
+              onClick={() => {
+                handleSelectedTracks(result);
+              }}
+              className="text-gray-400 text-m font-extrabold pl-3 pr-3 "
+            >
+              +
+            </button>
+          </div>
+        </div>
       ))}
     </div>
   );
